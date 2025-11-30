@@ -84,9 +84,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.1
-  m_Height: 0.9347432
+  m_Height: 0.82375085
   m_Direction: 2
-  m_Center: {x: 0, y: 0, z: 0.35}
+  m_Center: {x: 0, y: 0, z: 0.2945038}
 --- !u!65 &1127795046617235763
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -181,6 +181,7 @@ GameObject:
   - component: {fileID: 3088081161122335970}
   - component: {fileID: 2064129903767328256}
   - component: {fileID: 3402833285139374927}
+  - component: {fileID: 1659978756375516586}
   - component: {fileID: 7198682503535000501}
   m_Layer: 0
   m_Name: MiniGun-Blaster
@@ -205,9 +206,10 @@ Transform:
   - {fileID: 3333504799820852886}
   - {fileID: 3559981645893659131}
   - {fileID: 2052561825898087419}
-  - {fileID: 63568577957174866}
   - {fileID: 8314136500415004566}
   - {fileID: 8573291744681421161}
+  - {fileID: 5122859771008661432}
+  - {fileID: 1360977098736264556}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &2064129903767328256
@@ -302,19 +304,7 @@ MonoBehaviour:
       m_Calls: []
   m_Activated:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4535769829596953681, guid: 632ea17017a336d4da7cc6894e1ab7d7, type: 3}
-        m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_Deactivated:
     m_PersistentCalls:
       m_Calls: []
@@ -385,6 +375,22 @@ MonoBehaviour:
   m_LimitAngularVelocity: 0
   m_MaxLinearVelocityDelta: 10
   m_MaxAngularVelocityDelta: 20
+--- !u!114 &1659978756375516586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8408146301610481107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1621b956477cbf45ba02035643c9e37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  muzzleFlashPCVR: {fileID: 4535769829596953681, guid: 632ea17017a336d4da7cc6894e1ab7d7, type: 3}
+  muzzleFlashQuest: {fileID: 4535769829596953681, guid: b28a922e021af9b44918ac9b4376c77e, type: 3}
+  impactEffectPCVR: {fileID: 4535769829596953687, guid: 8cc24d16b4a59d0468d087883fb09757, type: 3}
+  impactEffectQuest: {fileID: 4535769829596953687, guid: 04818ccf3f7ead44babdacd1dd66f754, type: 3}
 --- !u!114 &7198682503535000501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -399,7 +405,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 3264324443470301279, guid: 8495ba529c9484244bcac6916830d227, type: 3}
   spawnPoint: {fileID: 8573291744681421161}
-  fireRate: 0.0005
+  fireRate: 0.05
 --- !u!1001 &2227145748500351355
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -462,7 +468,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3506779868912363501, guid: 12bfe5ae108da8541addced284cc5e9b, type: 3}
   m_PrefabInstance: {fileID: 2227145748500351355}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &4473092474802070016
+--- !u!1001 &3175428978778478910
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -470,18 +476,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3088081161122335970}
     m_Modifications:
-    - target: {fileID: 4535769829596953681, guid: 632ea17017a336d4da7cc6894e1ab7d7, type: 3}
-      propertyPath: looping
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4535769829596953682, guid: 632ea17017a336d4da7cc6894e1ab7d7, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4535769829596953682, guid: 632ea17017a336d4da7cc6894e1ab7d7, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.1
-      objectReference: {fileID: 0}
     - target: {fileID: 4535769829596953682, guid: 632ea17017a336d4da7cc6894e1ab7d7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -492,7 +486,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4535769829596953682, guid: 632ea17017a336d4da7cc6894e1ab7d7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.685
+      value: 0.738
       objectReference: {fileID: 0}
     - target: {fileID: 4535769829596953682, guid: 632ea17017a336d4da7cc6894e1ab7d7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -524,15 +518,77 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4535769829596953687, guid: 632ea17017a336d4da7cc6894e1ab7d7, type: 3}
       propertyPath: m_Name
-      value: souffle
+      value: Muzzle_PCVR
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 632ea17017a336d4da7cc6894e1ab7d7, type: 3}
---- !u!4 &63568577957174866 stripped
+--- !u!4 &1360977098736264556 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4535769829596953682, guid: 632ea17017a336d4da7cc6894e1ab7d7, type: 3}
-  m_PrefabInstance: {fileID: 4473092474802070016}
+  m_PrefabInstance: {fileID: 3175428978778478910}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8784912574619798506
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3088081161122335970}
+    m_Modifications:
+    - target: {fileID: 4535769829596953682, guid: b28a922e021af9b44918ac9b4376c77e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535769829596953682, guid: b28a922e021af9b44918ac9b4376c77e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535769829596953682, guid: b28a922e021af9b44918ac9b4376c77e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.738
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535769829596953682, guid: b28a922e021af9b44918ac9b4376c77e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535769829596953682, guid: b28a922e021af9b44918ac9b4376c77e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535769829596953682, guid: b28a922e021af9b44918ac9b4376c77e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535769829596953682, guid: b28a922e021af9b44918ac9b4376c77e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535769829596953682, guid: b28a922e021af9b44918ac9b4376c77e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535769829596953682, guid: b28a922e021af9b44918ac9b4376c77e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535769829596953682, guid: b28a922e021af9b44918ac9b4376c77e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535769829596953687, guid: b28a922e021af9b44918ac9b4376c77e, type: 3}
+      propertyPath: m_Name
+      value: Muzzle_Quest
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b28a922e021af9b44918ac9b4376c77e, type: 3}
+--- !u!4 &5122859771008661432 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4535769829596953682, guid: b28a922e021af9b44918ac9b4376c77e, type: 3}
+  m_PrefabInstance: {fileID: 8784912574619798506}
   m_PrefabAsset: {fileID: 0}

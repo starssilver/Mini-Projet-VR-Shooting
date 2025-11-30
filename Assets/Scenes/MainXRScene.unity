@@ -119,6 +119,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!198 &493705141 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1360977098736264559, guid: a9fd13739cc40ca498d0463fe7886c69, type: 3}
+  m_PrefabInstance: {fileID: 1041154368}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1041154368
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -127,6 +132,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1659978756375516586, guid: a9fd13739cc40ca498d0463fe7886c69, type: 3}
+      propertyPath: muzzleFlashPCVR
+      value: 
+      objectReference: {fileID: 493705141}
+    - target: {fileID: 1659978756375516586, guid: a9fd13739cc40ca498d0463fe7886c69, type: 3}
+      propertyPath: muzzleFlashQuest
+      value: 
+      objectReference: {fileID: 2031672293}
     - target: {fileID: 3088081161122335970, guid: a9fd13739cc40ca498d0463fe7886c69, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.7349372
@@ -166,6 +179,14 @@ PrefabInstance:
     - target: {fileID: 3088081161122335970, guid: a9fd13739cc40ca498d0463fe7886c69, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198682503535000501, guid: a9fd13739cc40ca498d0463fe7886c69, type: 3}
+      propertyPath: fireRate
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198682503535000501, guid: a9fd13739cc40ca498d0463fe7886c69, type: 3}
+      propertyPath: muzzleFlash
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8408146301610481107, guid: a9fd13739cc40ca498d0463fe7886c69, type: 3}
       propertyPath: m_Name
@@ -347,6 +368,11 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!198 &2031672293 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5122859771008661435, guid: a9fd13739cc40ca498d0463fe7886c69, type: 3}
+  m_PrefabInstance: {fileID: 1041154368}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2082135198
 PrefabInstance:
   m_ObjectHideFlags: 0
