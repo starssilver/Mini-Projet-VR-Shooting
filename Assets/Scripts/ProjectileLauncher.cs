@@ -5,7 +5,6 @@ using UnityEngine.XR.Interaction.Toolkit.Interactors;
 
 public class ProjectileLauncher : MonoBehaviour
 {
-    [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private float fireRate = 0.1f;
 
@@ -51,15 +50,36 @@ public class ProjectileLauncher : MonoBehaviour
 
     void Fire()
     {
-        GameObject proj = Instantiate(projectilePrefab, spawnPoint.position, spawnPoint.rotation);
+        // Vérifier que le pool existe
+        if (ProjectilePool.Instance == null)
+        {
+            Debug.LogError("ProjectilePool. Instance est null !  Assurez-vous qu'il y a un ProjectilePool dans la scène.");
+            return;
+        }
 
+        // Récupérer un projectile du pool
+        GameObject proj = ProjectilePool.Instance.GetProjectile();
+
+        if (proj == null)
+        {
+            Debug.LogWarning("Impossible de récupérer un projectile du pool");
+            return;
+        }
+
+        // Initialiser le projectile
         Projectile projectileScript = proj.GetComponent<Projectile>();
         if (projectileScript != null)
         {
-            projectileScript.SetShooter(gameObject);
-            projectileScript.SetImpactEffect(impactEffect); // Passer le bon effet selon la plateforme
+            projectileScript.Initialize(
+                spawnPoint.position,
+                spawnPoint.rotation,
+                spawnPoint.forward,
+                gameObject,
+                impactEffect
+            );
         }
 
+        // Jouer le muzzle flash
         if (muzzleFlash != null)
         {
             muzzleFlash.Stop();

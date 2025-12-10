@@ -66,7 +66,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bf6a673a7ceb9fd45968b0283b67b5bf, type: 2}
+  - {fileID: -8274133419916619345, guid: 2c09f317b1e1fe64f91260af6b88559d, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -121,3 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f10d41f092237d947a0781b3707bc099, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destructionEffect_PCVR: {fileID: 0}
+  destructionEffect_Quest: {fileID: 0}
+  respawnDelay: 2
+  autoRespawn: 1
